@@ -93,7 +93,7 @@ public class QuoteRepository {
               int mruSize = preferences.getInt(mruSizePrefKey,
                   context.getResources().getInteger(R.integer.mru_size_pref_default));
               quoteDao.deleteLru(mruSize)
-                  .subscribe(observer);
+                  .subscribe(observer); //least recent used this many items
             })
         );
   }
